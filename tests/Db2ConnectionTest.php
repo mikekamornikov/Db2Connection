@@ -19,6 +19,7 @@ class Db2ConnectionTest extends PHPUnit_Framework_TestCase
     {
         return array(
             array('', '', '', false),
+            array('SUGARUDB', 'db2inst1', 'db2inst1', false),
             array('SUGARULT', 'db2inst1', 'db2inst1', true),
         );
     }
