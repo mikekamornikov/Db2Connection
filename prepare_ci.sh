@@ -1,4 +1,5 @@
 #!/bin/sh
+
 # install ibm db2
 sudo apt-get install db2exc
 
@@ -10,3 +11,5 @@ echo -e "db2das1\ndb2das1" | sudo passwd db2das1
 # install php ibm_db2 extension
 echo "/opt/ibm/db2/V9.7" | sudo pecl install ibm_db2
 echo "extension=ibm_db2.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
+
+sudo 'su db2inst1 -c \'`pwd`/prepare_db.sh &> /dev/null; exit 1;\''
