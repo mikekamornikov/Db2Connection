@@ -4,4 +4,7 @@ php:
   - "5.3"
   - "5.4"
 
+before_script:
+  - sh prepare_ci.sh
+
 script: phpunit -c app
